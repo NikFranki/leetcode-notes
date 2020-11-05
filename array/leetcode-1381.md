@@ -12,21 +12,21 @@
 链接：<https://leetcode-cn.com/problems/decode-string>
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
-示例1
+## 示例1
 
 ```json
 输入：s = "3[a]2[bc]"
 输出："aaabcbc"
 ```
 
-示例2
+## 示例2
 
 ```json
 输入：s = "3[a2[c]]"
 输出："accaccacc"
 ```
 
-示例3
+## 示例3
 
 ```json
 输入：s = "2[abc]3[cd]ef"
@@ -35,7 +35,7 @@
 
 题解
 
-## 思路
+### 思路
 
 用一个数组来模拟栈，用一个变量来记录当前栈顶的位置
 
@@ -43,7 +43,7 @@
 - 在 pop 的时候, 先判断 top 是否是-1，是直接返回 -1，否则 top-- 并返回栈顶元素
 - 在 increment 的时候, 直接对于栈底的第 k 个元素加 val
 
-## 代码
+### 代码
 
 ```js
 function CustomStack(maxSize) {
@@ -75,7 +75,7 @@ function CustomStack(maxSize) {
 }
 ```
 
-## 复杂度分析
+### 复杂度分析
 
 - 时间复杂度: push pop 构造函数操作的复杂度为O(1)，increment 时间复杂度为O(k)
 - 空间复杂度: O(maxSize)
